@@ -1,0 +1,1 @@
+Base Station Shortcodes allows you to use shortcodes to display Zurb Foundation elements on sites using the Base Station theme. It also works on child themes, and may possibly work with other themes that have the appropriate Foundation CSS and JS.
