@@ -3,7 +3,7 @@
 Plugin Name: Base Station Shortcodes
 Plugin URI: http://www.johnparris.com/wordpress-plugins/basestation-shortcodes/
 Description: Shortcodes for displaying Foundation elements in the Base Station theme
-Version: 1.0
+Version: 1.0.1
 Author: John Parris
 Author URI: http://www.johnparris.com
 License: GPL2
@@ -107,6 +107,9 @@ class BaseStation_Shortcodes {
    * Example: [featured-posts tag="featured" max="3"] This will feature up to 3 posts tagged "featured".
    */
   function basestation_featured_posts_shortcode( $atts, $content = null ) {
+    /* Do nothing if we're doing an RSS feed */
+    if( is_feed() ) return;
+
     extract( shortcode_atts( array(
       'tag'    => '',
       'max'    => '',
